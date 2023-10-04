@@ -148,7 +148,7 @@ MonoBehaviour:
       m_Action: WASD
       m_Flags: 8
     m_Flags: 0
-  movementSpeed: 640
+  movementSpeed: 320
 --- !u!95 &3792374573933611121
 Animator:
   serializedVersion: 5

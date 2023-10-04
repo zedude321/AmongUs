@@ -50,7 +50,7 @@ public class AU_PlayerController : MonoBehaviour
         
         if (movementInput.x != 0)
         {
-            myAvatar.localScale = new Vector2(Mathf.Sign(movementInput.x), 1);
+            myAvatar.localScale = new Vector2(Mathf.Sign(movementInput.x)*128, 128);
         }
 
         myAnim.SetFloat("Speed", movementInput.magnitude);
