@@ -12,6 +12,6 @@ public class AU_CharacterCustomizer : MonoBehaviour
     }
 
     public void NextScene(int sceneIndex) {
-        SceneManager.loadScene(sceneIndex);
+        SceneManager.LoadScene(sceneIndex);
     }
 }

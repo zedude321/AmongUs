@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class AUPlayerController : MonoBehaviour
+public class AU_PlayerController : MonoBehaviour
 {
     [SerializeField] bool hasControl;
     public static AU_PlayerController localPlayer;
@@ -40,6 +40,7 @@ public class AUPlayerController : MonoBehaviour
         if (myColor == Color.clear) {
             myColor = Color.white;
         }
+
         myAvatarSprite.color = myColor;
     }
 
@@ -57,6 +58,7 @@ public class AUPlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         myRB.velocity = movementInput * movementSpeed;
+        Debug.Log(myRB.position);
     }
 
     public void SetColor(Color newColor) {
