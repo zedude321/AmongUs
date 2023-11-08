@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 8598563068111463424}
   - component: {fileID: 3792374573933611121}
   - component: {fileID: 8810008855791484477}
-  m_Layer: 0
+  - component: {fileID: 863409623394007792}
+  m_Layer: 6
   m_Name: AU_Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -212,6 +213,30 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 150
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &863409623394007792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506047250191085813}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e664413d085e0545aa8bab510cab0ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreMe:
+    serializedVersion: 2
+    m_Bits: 64
+  getRadius: 2560
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 128
+  sceneObjects: []
+  lightRays: {fileID: 0}
+  offset: 0.0001
+  showRed: 0
+  showGreen: 0
 --- !u!1 &3952116143713755051
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7465470233614673141}
   - component: {fileID: 6382999300064771317}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5189161073866661281}
   - component: {fileID: 6897173909195276816}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
