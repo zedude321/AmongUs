@@ -44,7 +44,7 @@ Shader "Unlit/ScreenspaceTexture"
                 o.screenPos = o.vertex.xyw;
 
                 // This might be platform-specific. Test with OpenGL.
-                o.screenPos.y *= -1.0f;
+                
 
                 UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;

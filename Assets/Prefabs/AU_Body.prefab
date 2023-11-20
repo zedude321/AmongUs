@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4352477566592733385}
   - component: {fileID: 3499921640293017774}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PartSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2368205681694477726}
   - component: {fileID: 1350829092776771378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BodySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 7295893351372789323}
   - component: {fileID: 7092256022877196258}
   - component: {fileID: 6475187558815925217}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AU_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
