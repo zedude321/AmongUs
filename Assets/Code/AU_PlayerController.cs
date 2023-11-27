@@ -117,9 +117,7 @@ public class AU_PlayerController : MonoBehaviour
         if (other.tag == "Player") {
             AU_PlayerController tempTarget = other.GetComponent<AU_PlayerController>();
             if (isImpostor) {
-                if (tempTarget.isImpostor) {
-                    return;
-                } else {
+                if (!tempTarget.isImpostor) {
                     targets.Add(tempTarget);
                 }
             }
