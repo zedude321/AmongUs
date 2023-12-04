@@ -191,6 +191,43 @@ MonoBehaviour:
   ignoreForBody:
     serializedVersion: 2
     m_Bits: 256
+  MOUSE:
+    m_Name: MOUSE
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: f9153493-db5a-4260-bc19-82011ef2892e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ad57d1e1-6d63-4228-90a2-69555ee43d6d
+      m_Path: <Mouse>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: MOUSE
+      m_Flags: 0
+    m_Flags: 0
+  INTERACTION:
+    m_Name: INTERACTION
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d0d1250b-e6c0-40ba-a0f2-4e4ff132e247
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 9d3f9846-b895-46e2-a8d6-32ed3e602328
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: INTERACTION
+      m_Flags: 0
+    m_Flags: 0
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!95 &3792374573933611121
 Animator:
   serializedVersion: 5
