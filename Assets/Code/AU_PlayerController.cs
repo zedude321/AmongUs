@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class AU_PlayerController : MonoBehaviour
 {
     [SerializeField] bool hasControl;
+    [SerializeField] bool ableToMove = true;
     public static AU_PlayerController localPlayer;
     //Compnents
     Rigidbody myRB;
@@ -70,11 +71,16 @@ public class AU_PlayerController : MonoBehaviour
         if (hasControl) {
             localPlayer = this;
         }
+        if (ableToMove)
+        {
+            myCamera = transform.GetChild(1).GetComponent<Camera>();
+        }
         targets = new List<AU_PlayerController>();
         myRB = GetComponent<Rigidbody>();
         myAvatar = transform.GetChild(0);
         myAnim = GetComponent<Animator>();
         myAvatarSprite = myAvatar.GetComponent<SpriteRenderer>();
+        Debug.Log(myAvatarSprite);
 
         if (myColor == Color.clear) {
             myColor = Color.white;
@@ -91,7 +97,7 @@ public class AU_PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!hasControl)
+        if (!hasControl || !ableToMove)
             return;
         
         movementInput = WASD.ReadValue<Vector2>();
@@ -106,19 +112,19 @@ public class AU_PlayerController : MonoBehaviour
         if (allBodies.Count > 0) {
             BodySearch();
         }
-
         mousePositionInput = MOUSE.ReadValue<Vector2>();
     }
 
     private void FixedUpdate()
     {
+        if (!ableToMove) return;
         myRB.velocity = movementInput * movementSpeed;
     }
 
     public void SetColor(Color newColor) {
         myColor = newColor;
         if (myAvatarSprite != null) {
-            myAvatarSprite.color=myColor;
+            myAvatarSprite.color=newColor;
         }
     }
 
@@ -200,19 +206,20 @@ public class AU_PlayerController : MonoBehaviour
         tempBody.GetComponent<AU_Body>().Report();
     }
 
-    void Interact (InputAction.CallbackContext context) {
+    void Interact(InputAction.CallbackContext context) {
         if (context.phase == InputActionPhase.Performed) {
-            RaycastHit hit;
-            Debug.Log(myCamera);
-            Ray ray = myCamera.ScreenPointToRay(mousePositionInput);
-            if (Physics.Raycast(ray, out hit, interactLayer)) {
-                if (hit.transform.tag == "Interactable") {
-                    if (!hit.transform.GetChild(0).gameObject.activeInHierarchy)
-                        return;
-                    AU_Interactable temp = hit.transform.GetComponent<AU_Interactable>();
-                    temp.PlayMiniGame();
+            if (myCamera) {
+                RaycastHit hit;
+                Ray ray = myCamera.ScreenPointToRay(mousePositionInput);
+                if (Physics.Raycast(ray, out hit, interactLayer)) {
+                    if (hit.transform.tag == "Interactable") {
+                        if (!hit.transform.GetChild(0).gameObject.activeInHierarchy)
+                            return;
+                        AU_Interactable temp = hit.transform.GetComponent<AU_Interactable>();
+                        temp.PlayMiniGame();
+                    }
                 }
             }
-        }
-    }   
+        } 
+    }
 }

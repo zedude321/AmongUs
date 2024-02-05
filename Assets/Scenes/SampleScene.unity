@@ -18279,11 +18279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1215371994108205978, guid: ebb5e6a79e2129e4286000c3411ead2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.51
+      value: -3.54
       objectReference: {fileID: 0}
     - target: {fileID: 1215371994108205978, guid: ebb5e6a79e2129e4286000c3411ead2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.99
+      value: -0.98
       objectReference: {fileID: 0}
     - target: {fileID: 1215371994108205978, guid: ebb5e6a79e2129e4286000c3411ead2d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18317,10 +18317,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3376880201856653388, guid: ebb5e6a79e2129e4286000c3411ead2d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1059359867, guid: 98750f6f8c58fa94ba3d9941b6dc9c35, type: 3}
     - target: {fileID: 4337158926670082869, guid: ebb5e6a79e2129e4286000c3411ead2d, type: 3}
       propertyPath: miniGame
       value: 
       objectReference: {fileID: 2071401883869372832}
+    - target: {fileID: 5209759273925680009, guid: ebb5e6a79e2129e4286000c3411ead2d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1059359867, guid: 98750f6f8c58fa94ba3d9941b6dc9c35, type: 3}
     - target: {fileID: 7570954601477964431, guid: ebb5e6a79e2129e4286000c3411ead2d, type: 3}
       propertyPath: m_Name
       value: Interactable
@@ -18457,6 +18465,18 @@ PrefabInstance:
     - target: {fileID: 8598563068111463424, guid: 3bde12128c84c3441a508d5931997ca0, type: 3}
       propertyPath: ignoreForBody.m_Bits
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598563068111463424, guid: 3bde12128c84c3441a508d5931997ca0, type: 3}
+      propertyPath: MOUSE.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598563068111463424, guid: 3bde12128c84c3441a508d5931997ca0, type: 3}
+      propertyPath: MOUSE.m_SingletonActionBindings.Array.data[1].m_Id
+      value: 7eeaf547-ab66-48db-ab37-576a734cab11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598563068111463424, guid: 3bde12128c84c3441a508d5931997ca0, type: 3}
+      propertyPath: MOUSE.m_SingletonActionBindings.Array.data[1].m_Action
+      value: MOUSE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

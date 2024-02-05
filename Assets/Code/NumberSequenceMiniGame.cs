@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NumberSequenceMiniGame : MonoBehaviour
 {
@@ -17,20 +18,35 @@ public class NumberSequenceMiniGame : MonoBehaviour
     private void OnEnable () {
         nextButton = 0;
         for(int i = 0; i < myObjects.Length; i++) {
+            myObjects[i].GetComponent<Image>().color = Color.white;
             myObjects[i].transform.SetSiblingIndex(Random.Range(0, 9));
         }
     }
 
     public void ButtonOrder (int button) {
-        Debug.Log("Pressed");
         if (button == nextButton) {
+            myObjects[nextButton].GetComponent<Image>().color = Color.green;
             nextButton++;
-        } else {
+            if (button == 9) {
+                nextButton = 0;
+                Debug.Log("finish");
+                ButtonPanelClose();
+            }
+        } else if (button > nextButton) {
+            Debug.Log("incorrect");
+            StartCoroutine(Incorrect());
             nextButton = 0;
         }
-        if (button == 9) {
-            nextButton = 0;
-            ButtonPanelClose();
+    }
+
+    IEnumerator Incorrect () {
+        Debug.Log("Incorrect reached");
+        for(int i = 0; i < 10; i++) {
+            myObjects[i].GetComponent<Image>().color = Color.red;
+        }
+        yield return new WaitForSeconds(0.2F);
+        for(int i = 0; i < 10; i++) {
+            myObjects[i].GetComponent<Image>().color = Color.white;
         }
     }
 
