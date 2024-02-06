@@ -70,6 +70,9 @@ public class AU_PlayerController : MonoBehaviour
     {
         if (hasControl) {
             localPlayer = this;
+        } else
+        {
+            ableToMove = false;
         }
         if (ableToMove)
         {
